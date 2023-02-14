@@ -11,7 +11,7 @@ with open("classes.txt", "r") as f:
     classes = f.read().splitlines()
 
 
-images_path = glob.glob(r"ball.jpg") #ganti dengan direktori gambar anda
+images_path = glob.glob("ball.jpg") #ganti dengan direktori gambar anda
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
